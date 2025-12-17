@@ -389,10 +389,10 @@ class Publishing_Flow_Admin {
 		foreach ( $required_primary as $key => $arr ) {
 
 			// Handle missing values.
-			$label      = $arr['label'] ?: $key;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $key;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$req_primary[ $key ] = array(
 				'label'     => $label,
@@ -405,10 +405,10 @@ class Publishing_Flow_Admin {
 		foreach ( $optional_primary as $key => $arr ) {
 
 			// Handle missing values.
-			$label      = $arr['label'] ?: $key;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $key;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$opt_primary[ $key ] = array(
 				'label'     => $label,
@@ -422,10 +422,10 @@ class Publishing_Flow_Admin {
 			$meta_value = ( isset( $meta[ $key ] ) && [] !== $meta[ $key ] ) ? $meta[ $key ] : null;
 
 			// Handle missing values.
-			$label      = $arr['label'] ?: $key;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $key;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$req_meta[ $key ] = array(
 				'label'     => $label,
@@ -439,10 +439,10 @@ class Publishing_Flow_Admin {
 			$meta_value = ( isset( $meta[ $key ] ) && [] !== $meta[ $key ] ) ? $meta[ $key ] : null;
 
 			// Handle missing labels.
-			$label      = $arr['label'] ?: $key;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $key;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$opt_meta[ $key ] = array(
 				'label'     => $label,
@@ -453,10 +453,10 @@ class Publishing_Flow_Admin {
 			);
 		}
 		foreach ( $required_group as $key => $group ) {
-			$label      = $group['label'];
-			$show_value = ( $group['show_value'] );
-			$has_value  = $group['has_value'] ?: '';
-			$no_value   = $group['no_value'] ?: '';
+			$label      = ( $group['label'] ?? '' ) ?: $key;
+			$show_value = ! empty( $group['show_value'] );
+			$has_value  = $group['has_value'] ?? '';
+			$no_value   = $group['no_value'] ?? '';
 			$meta_keys  = array_keys( $group['meta_keys'] );
 			$value      = array();
 
@@ -482,10 +482,10 @@ class Publishing_Flow_Admin {
 			);
 		}
 		foreach ( $optional_group as $key => $group ) {
-			$label      = $group['label'];
-			$show_value = ( $group['show_value'] );
-			$has_value  = $group['has_value'] ?: '';
-			$no_value   = $group['no_value'] ?: '';
+			$label      = ( $group['label'] ?? '' ) ?: $key;
+			$show_value = ! empty( $group['show_value'] );
+			$has_value  = $group['has_value'] ?? '';
+			$no_value   = $group['no_value'] ?? '';
 			$meta_keys  = array_keys( $group['meta_keys'] );
 			$value      = array();
 
@@ -518,10 +518,10 @@ class Publishing_Flow_Admin {
 			}
 
 			// Handle missing values.
-			$label      = $arr['label'] ?: $tax;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $tax;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$req_tax[ $tax ] = array(
 				'label'     => $label,
@@ -539,10 +539,10 @@ class Publishing_Flow_Admin {
 			}
 
 			// Handle missing values.
-			$label      = $arr['label'] ?: $tax;
-			$has_value  = $arr['has_value'] ?: '';
-			$no_value   = $arr['no_value'] ?: '';
-			$show_value = ( $arr['show_value'] );
+			$label      = ( $arr['label'] ?? '' ) ?: $tax;
+			$has_value  = $arr['has_value'] ?? '';
+			$no_value   = $arr['no_value'] ?? '';
+			$show_value = ! empty( $arr['show_value'] );
 
 			$opt_tax[ $tax ] = array(
 				'label'     => $label,
